@@ -10,6 +10,7 @@
     "validate": "node scripts/validate.mjs",
     "variants": "node scripts/variants.mjs",
     "fuzz": "node scripts/fuzz.mjs",
+    "block": "node scripts/block.mjs",
     "serve:ssr:srr-material-oom": "node dist/srr-material-oom/server/server.mjs"
   },
   "private": true,

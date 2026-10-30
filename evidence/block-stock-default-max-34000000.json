@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-30T01:20:30.634Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/srr-material-oom",
+  "heap": "default",
+  "heapLimitMiB": 4288,
+  "attack": "?max=34000000",
+  "control": "?max=1e2",
+  "samples": 10,
+  "rounds": 3,
+  "results": [
+    {
+      "idle": {
+        "p50": 22,
+        "p95": 36,
+        "max": 36
+      },
+      "during": {
+        "p50": 2800,
+        "max": 2800,
+        "n": 1
+      },
+      "attack": {
+        "status": 200,
+        "ms": 2797
+      },
+      "alive": true,
+      "fatal": false,
+      "rangeError": false
+    },
+    {
+      "idle": {
+        "p50": 28,
+        "p95": 33,
+        "max": 33
+      },
+      "during": {
+        "p50": 2772,
+        "max": 2772,
+        "n": 1
+      },
+      "attack": {
+        "status": 200,
+        "ms": 2765
+      },
+      "alive": true,
+      "fatal": false,
+      "rangeError": false
+    },
+    {
+      "idle": {
+        "p50": 22,
+        "p95": 31,
+        "max": 31
+      },
+      "during": {
+        "p50": 2797,
+        "max": 2797,
+        "n": 1
+      },
+      "attack": {
+        "status": 200,
+        "ms": 2763
+      },
+      "alive": true,
+      "fatal": false,
+      "rangeError": false
+    }
+  ]
+}
