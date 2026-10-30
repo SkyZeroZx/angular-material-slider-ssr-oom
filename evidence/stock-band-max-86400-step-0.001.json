@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-30T03:48:30.747Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5",
+    "ssr": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/band",
+  "control": "band?start=0&end=100",
+  "candidate": "band?max=86400&step=0.001",
+  "trials": 3,
+  "expect": "any",
+  "passed": true,
+  "rows": [
+    [
+      "1024 MiB",
+      "1216 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 200, 6.7 s"
+    ]
+  ],
+  "results": [
+    {
+      "heap": "1024",
+      "query": "band?start=0&end=100",
+      "outcome": "200",
+      "ms": 32,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "band?start=0&end=100",
+      "outcome": "200",
+      "ms": 32,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "band?start=0&end=100",
+      "outcome": "200",
+      "ms": 15,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "band?max=86400&step=0.001",
+      "outcome": "200",
+      "ms": 6708,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "band?max=86400&step=0.001",
+      "outcome": "200",
+      "ms": 6735,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "band?max=86400&step=0.001",
+      "outcome": "200",
+      "ms": 6785,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    }
+  ]
+}

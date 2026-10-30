@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-30T03:46:05.001Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5",
+    "ssr": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/band",
+  "control": "band?start=0&end=100",
+  "candidate": "band?start=1e9",
+  "trials": 3,
+  "expect": "any",
+  "passed": true,
+  "rows": [
+    [
+      "1024 MiB",
+      "1216 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 fatal, 5.5 s"
+    ]
+  ],
+  "results": [
+    {
+      "heap": "1024",
+      "query": "band?start=0&end=100",
+      "outcome": "200",
+      "ms": 29,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "band?start=0&end=100",
+      "outcome": "200",
+      "ms": 34,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "band?start=0&end=100",
+      "outcome": "200",
+      "ms": 27,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "band?start=1e9",
+      "outcome": "fatal",
+      "ms": 6067,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "band?start=1e9",
+      "outcome": "fatal",
+      "ms": 5467,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "band?start=1e9",
+      "outcome": "fatal",
+      "ms": 5429,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 1216
+    }
+  ]
+}
