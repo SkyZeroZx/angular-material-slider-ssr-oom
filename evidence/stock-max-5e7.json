@@ -1,0 +1,246 @@
+{
+  "date": "2026-10-29T22:17:54.454Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5",
+    "ssr": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/srr-material-oom",
+  "control": "?max=1e2",
+  "candidate": "?max=5e7",
+  "trials": 3,
+  "expect": "any",
+  "passed": true,
+  "rows": [
+    [
+      "256 MiB",
+      "448 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 fatal, 1.0 s"
+    ],
+    [
+      "1024 MiB",
+      "1216 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 200, 3.7 s"
+    ],
+    [
+      "default",
+      "4288 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 200, 3.6 s"
+    ]
+  ],
+  "results": [
+    {
+      "heap": "256",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 14,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 27,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 26,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=5e7",
+      "outcome": "fatal",
+      "ms": 1088,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=5e7",
+      "outcome": "fatal",
+      "ms": 1018,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=5e7",
+      "outcome": "fatal",
+      "ms": 999,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "1024",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 27,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 18,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 12,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=5e7",
+      "outcome": "200",
+      "ms": 3702,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=5e7",
+      "outcome": "200",
+      "ms": 3692,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=5e7",
+      "outcome": "200",
+      "ms": 3708,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "default",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 19,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 30,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 26,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=5e7",
+      "outcome": "200",
+      "ms": 3554,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=5e7",
+      "outcome": "200",
+      "ms": 3743,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=5e7",
+      "outcome": "200",
+      "ms": 3571,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    }
+  ]
+}

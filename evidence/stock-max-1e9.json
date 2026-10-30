@@ -1,0 +1,426 @@
+{
+  "date": "2026-10-29T22:17:13.930Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5",
+    "ssr": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/srr-material-oom",
+  "control": "?max=1e2",
+  "candidate": "?max=1e9",
+  "trials": 3,
+  "expect": "fatal",
+  "passed": true,
+  "rows": [
+    [
+      "256 MiB",
+      "448 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 fatal, 3.0 s"
+    ],
+    [
+      "1024 MiB",
+      "1216 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 fatal, 5.5 s"
+    ],
+    [
+      "4096 MiB",
+      "4288 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 fatal, 5.8 s"
+    ],
+    [
+      "16384 MiB",
+      "16576 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 fatal, 5.6 s"
+    ],
+    [
+      "default",
+      "4288 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 fatal, 5.6 s"
+    ]
+  ],
+  "results": [
+    {
+      "heap": "256",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 33,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 14,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 16,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 2988,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 3003,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 3442,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "1024",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 15,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 13,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 16,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 5505,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 5557,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 5420,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "4096",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 20,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "4096",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 19,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "4096",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 20,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "4096",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 5885,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "4096",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 5757,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "4096",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 5494,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "16384",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 26,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 16576
+    },
+    {
+      "heap": "16384",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 13,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 16576
+    },
+    {
+      "heap": "16384",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 11,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 16576
+    },
+    {
+      "heap": "16384",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 5599,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 16576
+    },
+    {
+      "heap": "16384",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 5613,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 16576
+    },
+    {
+      "heap": "16384",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 5530,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 16576
+    },
+    {
+      "heap": "default",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 22,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 21,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 16,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 5589,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 5550,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=1e9",
+      "outcome": "fatal",
+      "ms": 5621,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 4288
+    }
+  ]
+}

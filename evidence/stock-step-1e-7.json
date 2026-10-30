@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-29T22:11:09.365Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5",
+    "ssr": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/srr-material-oom",
+  "control": "?max=1e2",
+  "candidate": "?step=1e-7",
+  "trials": 1,
+  "expect": "fatal",
+  "passed": true,
+  "rows": [
+    [
+      "default",
+      "4288 MiB",
+      "1/1 200, 0.0 s",
+      "1/1 fatal, 6.0 s"
+    ]
+  ],
+  "results": [
+    {
+      "heap": "default",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 13,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?step=1e-7",
+      "outcome": "fatal",
+      "ms": 6015,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 4288
+    }
+  ]
+}

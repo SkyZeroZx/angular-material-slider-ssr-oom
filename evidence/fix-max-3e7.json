@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-29T22:14:52.307Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5",
+    "ssr": "22.2.5"
+  },
+  "variant": "fix",
+  "build": "dist/fix",
+  "control": "?max=1e2",
+  "candidate": "?max=3e7",
+  "trials": 3,
+  "expect": "survive",
+  "passed": true,
+  "rows": [
+    [
+      "256 MiB",
+      "448 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 200, 0.0 s"
+    ]
+  ],
+  "results": [
+    {
+      "heap": "256",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 14,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 15,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 17,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=3e7",
+      "outcome": "200",
+      "ms": 13,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=3e7",
+      "outcome": "200",
+      "ms": 20,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=3e7",
+      "outcome": "200",
+      "ms": 13,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    }
+  ]
+}

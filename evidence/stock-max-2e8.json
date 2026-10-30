@@ -1,0 +1,246 @@
+{
+  "date": "2026-10-29T22:18:34.283Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5",
+    "ssr": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/srr-material-oom",
+  "control": "?max=1e2",
+  "candidate": "?max=2e8",
+  "trials": 3,
+  "expect": "any",
+  "passed": true,
+  "rows": [
+    [
+      "256 MiB",
+      "448 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 fatal, 2.9 s"
+    ],
+    [
+      "1024 MiB",
+      "1216 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 RangeError, 3.2 s"
+    ],
+    [
+      "default",
+      "4288 MiB",
+      "3/3 200, 0.0 s",
+      "3/3 RangeError, 3.4 s"
+    ]
+  ],
+  "results": [
+    {
+      "heap": "256",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 18,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 34,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 16,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=2e8",
+      "outcome": "fatal",
+      "ms": 2936,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=2e8",
+      "outcome": "fatal",
+      "ms": 2924,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "256",
+      "query": "?max=2e8",
+      "outcome": "fatal",
+      "ms": 2959,
+      "response": "ECONNRESET",
+      "alive": false,
+      "exit": {
+        "code": 134,
+        "signal": null
+      },
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "heapLimitMiB": 448
+    },
+    {
+      "heap": "1024",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 19,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 36,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 20,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=2e8",
+      "outcome": "RangeError",
+      "ms": 3167,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "RangeError: Invalid array length",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=2e8",
+      "outcome": "RangeError",
+      "ms": 3227,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "RangeError: Invalid array length",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "1024",
+      "query": "?max=2e8",
+      "outcome": "RangeError",
+      "ms": 3275,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "RangeError: Invalid array length",
+      "heapLimitMiB": 1216
+    },
+    {
+      "heap": "default",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 17,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 10,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=1e2",
+      "outcome": "200",
+      "ms": 13,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=2e8",
+      "outcome": "RangeError",
+      "ms": 3525,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "RangeError: Invalid array length",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=2e8",
+      "outcome": "RangeError",
+      "ms": 3357,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "RangeError: Invalid array length",
+      "heapLimitMiB": 4288
+    },
+    {
+      "heap": "default",
+      "query": "?max=2e8",
+      "outcome": "RangeError",
+      "ms": 3403,
+      "response": 200,
+      "alive": true,
+      "exit": null,
+      "diagnostic": "RangeError: Invalid array length",
+      "heapLimitMiB": 4288
+    }
+  ]
+}
