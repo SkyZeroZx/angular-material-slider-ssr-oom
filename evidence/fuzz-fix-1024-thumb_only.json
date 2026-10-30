@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-30T03:18:59.513Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5"
+  },
+  "variant": "fix",
+  "build": "dist/fix",
+  "heap": "1024",
+  "control": "?max=1e2",
+  "corpus": "thumb_only",
+  "confirmRuns": 3,
+  "slowMs": 1000,
+  "timeoutMs": 60000,
+  "kills": [],
+  "results": [
+    {
+      "group": "thumb_only",
+      "query": "?value=1e6",
+      "why": "a million ticks from the thumb alone",
+      "outcome": "200",
+      "ms": 16,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "thumb_only",
+      "query": "?value=5e7",
+      "why": "fifty million, 10 bytes, max still 100",
+      "outcome": "200",
+      "ms": 12,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "thumb_only",
+      "query": "?value=-5e7",
+      "why": "fifty million below the floor",
+      "outcome": "200",
+      "ms": 19,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "thumb_only",
+      "query": "?value=1e9",
+      "why": "a billion ticks, 10 bytes, max still 100",
+      "outcome": "200",
+      "ms": 17,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "thumb_only",
+      "query": "?value=-1e9",
+      "why": "a billion below the floor",
+      "outcome": "200",
+      "ms": 7,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "thumb_only",
+      "query": "?value=34000000",
+      "why": "one step past the cliff from the thumb alone",
+      "outcome": "200",
+      "ms": 21,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "thumb_only",
+      "query": "?value=1e9&max=100",
+      "why": "max pinned to its default, explicitly",
+      "outcome": "200",
+      "ms": 32,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-30T03:12:59.656Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/srr-material-oom",
+  "heap": "1024",
+  "control": "?max=1e2",
+  "corpus": "thumb",
+  "confirmRuns": 3,
+  "slowMs": 1000,
+  "timeoutMs": 60000,
+  "kills": [
+    "?max=34000000&value=-1e9"
+  ],
+  "results": [
+    {
+      "group": "thumb",
+      "query": "?max=34000000&value=0",
+      "why": "thumb at the floor, one large array",
+      "outcome": "slow",
+      "ms": 2757,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "slow": 3
+        },
+        "ms": 2776,
+        "diagnostic": ""
+      }
+    },
+    {
+      "group": "thumb",
+      "query": "?max=34000000&value=17000000",
+      "why": "thumb centred, two arrays then concat",
+      "outcome": "200",
+      "ms": 221,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "thumb",
+      "query": "?max=34000000&value=34000000",
+      "why": "thumb at the ceiling",
+      "outcome": "slow",
+      "ms": 2697,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "slow": 3
+        },
+        "ms": 2795,
+        "diagnostic": ""
+      }
+    },
+    {
+      "group": "thumb",
+      "query": "?max=34000000&value=-1e9",
+      "why": "thumb below the floor",
+      "outcome": "fatal",
+      "ms": 5253,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 5083,
+        "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory"
+      }
+    }
+  ]
+}

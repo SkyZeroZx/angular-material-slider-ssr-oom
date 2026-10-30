@@ -1,0 +1,140 @@
+{
+  "date": "2026-10-30T03:10:58.137Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/srr-material-oom",
+  "heap": "512",
+  "control": "?max=1e2",
+  "corpus": "realistic",
+  "confirmRuns": 3,
+  "slowMs": 1000,
+  "timeoutMs": 60000,
+  "kills": [
+    "?max=1000000&step=0.01",
+    "?max=86400&step=0.001",
+    "?min=-1000000&max=1000000&step=0.01"
+  ],
+  "results": [
+    {
+      "group": "realistic",
+      "query": "?max=100000&step=0.01",
+      "why": "0 to 100k at cent precision, 10M ticks",
+      "outcome": "200",
+      "ms": 100,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "realistic",
+      "query": "?max=1000000&step=0.01",
+      "why": "0 to 1M at cent precision, 100M ticks",
+      "outcome": "fatal",
+      "ms": 1956,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 1924,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "realistic",
+      "query": "?max=1000000&step=0.1",
+      "why": "0 to 1M at ten-cent precision, 10M ticks",
+      "outcome": "200",
+      "ms": 93,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "realistic",
+      "query": "?max=86400&step=0.001",
+      "why": "a day in seconds at millisecond precision, 86M ticks",
+      "outcome": "fatal",
+      "ms": 1903,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 1890,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "realistic",
+      "query": "?max=31536000&step=1",
+      "why": "a year in seconds, 31.5M ticks, just under the cliff",
+      "outcome": "200",
+      "ms": 170,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "realistic",
+      "query": "?max=100&step=0.00001",
+      "why": "0 to 100 at five decimals, 10M ticks",
+      "outcome": "200",
+      "ms": 62,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "realistic",
+      "query": "?min=-1000000&max=1000000&step=0.01",
+      "why": "a signed offset at cent precision, 200M ticks",
+      "outcome": "fatal",
+      "ms": 1893,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 1925,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "realistic",
+      "query": "?max=34000000&step=1",
+      "why": "an IDR or COP price ceiling, one step past the cliff",
+      "outcome": "slow",
+      "ms": 2788,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "slow": 3
+        },
+        "ms": 2829,
+        "diagnostic": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "date": "2026-10-30T03:18:30.850Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/srr-material-oom",
+  "heap": "1024",
+  "control": "?max=1e2",
+  "corpus": "thumb_only",
+  "confirmRuns": 3,
+  "slowMs": 1000,
+  "timeoutMs": 60000,
+  "kills": [
+    "?value=1e9",
+    "?value=-1e9",
+    "?value=1e9&max=100"
+  ],
+  "results": [
+    {
+      "group": "thumb_only",
+      "query": "?value=1e6",
+      "why": "a million ticks from the thumb alone",
+      "outcome": "200",
+      "ms": 40,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "thumb_only",
+      "query": "?value=5e7",
+      "why": "fifty million, 10 bytes, max still 100",
+      "outcome": "slow",
+      "ms": 3671,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "slow": 3
+        },
+        "ms": 3666,
+        "diagnostic": ""
+      }
+    },
+    {
+      "group": "thumb_only",
+      "query": "?value=-5e7",
+      "why": "fifty million below the floor",
+      "outcome": "slow",
+      "ms": 3658,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "slow": 3
+        },
+        "ms": 3637,
+        "diagnostic": ""
+      }
+    },
+    {
+      "group": "thumb_only",
+      "query": "?value=1e9",
+      "why": "a billion ticks, 10 bytes, max still 100",
+      "outcome": "fatal",
+      "ms": 5537,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 5832,
+        "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "thumb_only",
+      "query": "?value=-1e9",
+      "why": "a billion below the floor",
+      "outcome": "fatal",
+      "ms": 5551,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 5400,
+        "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "thumb_only",
+      "query": "?value=34000000",
+      "why": "one step past the cliff from the thumb alone",
+      "outcome": "slow",
+      "ms": 2728,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "slow": 3
+        },
+        "ms": 2810,
+        "diagnostic": ""
+      }
+    },
+    {
+      "group": "thumb_only",
+      "query": "?value=1e9&max=100",
+      "why": "max pinned to its default, explicitly",
+      "outcome": "fatal",
+      "ms": 5550,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 5229,
+        "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory"
+      }
+    }
+  ]
+}

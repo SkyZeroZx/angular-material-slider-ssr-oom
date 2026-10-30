@@ -1,0 +1,764 @@
+{
+  "date": "2026-10-30T01:09:03.226Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/srr-material-oom",
+  "heap": "256",
+  "control": "?max=1e2",
+  "corpus": "all",
+  "confirmRuns": 3,
+  "slowMs": 1000,
+  "timeoutMs": 60000,
+  "kills": [
+    "?max=5e7",
+    "?max=1.3e8",
+    "?max=2e8",
+    "?max=2.5e8",
+    "?max=1e9",
+    "?max=4294967294",
+    "?max=4294967295",
+    "?step=1e-6",
+    "?step=1e-7",
+    "?min=-1e9&max=1e9",
+    "?max=1e4&step=1e-5",
+    "?max=1e9&value=1e9",
+    "?max=1e9&show=1",
+    "?max=1e9&SHOW=0",
+    "?max=1e9&show=false",
+    "?max=+1e9",
+    "?max=%201e9",
+    "?max=0x3B9ACA00",
+    "?max=1E9",
+    "?max=1e%2B9"
+  ],
+  "results": [
+    {
+      "group": "magnitude",
+      "query": "?max=1e7",
+      "why": "ten million ticks",
+      "outcome": "200",
+      "ms": 93,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "magnitude",
+      "query": "?max=3e7",
+      "why": "thirty million, just under 2^25",
+      "outcome": "200",
+      "ms": 232,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "magnitude",
+      "query": "?max=5e7",
+      "why": "fifty million",
+      "outcome": "fatal",
+      "ms": 1050,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 1027,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "magnitude",
+      "query": "?max=1.3e8",
+      "why": "last size V8 keeps as a regular array",
+      "outcome": "fatal",
+      "ms": 3027,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 3057,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "magnitude",
+      "query": "?max=2e8",
+      "why": "past the regular-array limit",
+      "outcome": "fatal",
+      "ms": 3021,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 3197,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "magnitude",
+      "query": "?max=2.5e8",
+      "why": "start of the dictionary-elements band",
+      "outcome": "fatal",
+      "ms": 3188,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 3167,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "magnitude",
+      "query": "?max=1e9",
+      "why": "the published candidate",
+      "outcome": "fatal",
+      "ms": 3787,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 3423,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "magnitude",
+      "query": "?max=4294967294",
+      "why": "one below 2^32 - 1, V8 max array length",
+      "outcome": "fatal",
+      "ms": 3184,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 3089,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "magnitude",
+      "query": "?max=4294967295",
+      "why": "2^32 - 1 exactly",
+      "outcome": "fatal",
+      "ms": 3055,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 3009,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "magnitude",
+      "query": "?max=4294967296",
+      "why": "one past the array-length limit",
+      "outcome": "RangeError",
+      "ms": 17,
+      "response": 200,
+      "diagnostic": "RangeError: Invalid array length",
+      "reusable": false,
+      "confirmed": {
+        "runs": 1,
+        "counts": {
+          "RangeError": 1
+        },
+        "ms": 27,
+        "diagnostic": "RangeError: Invalid array length"
+      }
+    },
+    {
+      "group": "magnitude",
+      "query": "?max=9007199254740991",
+      "why": "Number.MAX_SAFE_INTEGER",
+      "outcome": "RangeError",
+      "ms": 34,
+      "response": 200,
+      "diagnostic": "RangeError: Invalid array length",
+      "reusable": false,
+      "confirmed": {
+        "runs": 1,
+        "counts": {
+          "RangeError": 1
+        },
+        "ms": 13,
+        "diagnostic": "RangeError: Invalid array length"
+      }
+    },
+    {
+      "group": "magnitude",
+      "query": "?max=1e308",
+      "why": "near Number.MAX_VALUE",
+      "outcome": "RangeError",
+      "ms": 19,
+      "response": 200,
+      "diagnostic": "RangeError: Invalid array length",
+      "reusable": false,
+      "confirmed": {
+        "runs": 1,
+        "counts": {
+          "RangeError": 1
+        },
+        "ms": 20,
+        "diagnostic": "RangeError: Invalid array length"
+      }
+    },
+    {
+      "group": "nonfinite",
+      "query": "?max=1e400",
+      "why": "overflows to Infinity",
+      "outcome": "RangeError",
+      "ms": 28,
+      "response": 200,
+      "diagnostic": "RangeError: Invalid array length",
+      "reusable": false,
+      "confirmed": {
+        "runs": 1,
+        "counts": {
+          "RangeError": 1
+        },
+        "ms": 20,
+        "diagnostic": "RangeError: Invalid array length"
+      }
+    },
+    {
+      "group": "nonfinite",
+      "query": "?max=Infinity",
+      "why": "Infinity by name",
+      "outcome": "RangeError",
+      "ms": 11,
+      "response": 200,
+      "diagnostic": "RangeError: Invalid array length",
+      "reusable": false,
+      "confirmed": {
+        "runs": 1,
+        "counts": {
+          "RangeError": 1
+        },
+        "ms": 20,
+        "diagnostic": "RangeError: Invalid array length"
+      }
+    },
+    {
+      "group": "nonfinite",
+      "query": "?min=-1e400",
+      "why": "negative Infinity as the lower bound",
+      "outcome": "RangeError",
+      "ms": 18,
+      "response": 200,
+      "diagnostic": "RangeError: Invalid array length",
+      "reusable": false,
+      "confirmed": {
+        "runs": 1,
+        "counts": {
+          "RangeError": 1
+        },
+        "ms": 18,
+        "diagnostic": "RangeError: Invalid array length"
+      }
+    },
+    {
+      "group": "nonfinite",
+      "query": "?max=abc",
+      "why": "NaN from an unparsable max",
+      "outcome": "200",
+      "ms": 20,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "nonfinite",
+      "query": "?max=",
+      "why": "empty max, Number(\"\") is 0",
+      "outcome": "200",
+      "ms": 16,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "nonfinite",
+      "query": "?step=abc",
+      "why": "NaN step",
+      "outcome": "200",
+      "ms": 14,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "nonfinite",
+      "query": "?step=0",
+      "why": "zero step, the slider falls back to 1",
+      "outcome": "200",
+      "ms": 6,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "nonfinite",
+      "query": "?step=-1",
+      "why": "negative step, a negative count",
+      "outcome": "200",
+      "ms": 21,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "nonfinite",
+      "query": "?max=-1e9",
+      "why": "max below min, a negative count",
+      "outcome": "200",
+      "ms": 12,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "step",
+      "query": "?step=1e-3",
+      "why": "a hundred thousand ticks",
+      "outcome": "200",
+      "ms": 8,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "step",
+      "query": "?step=1e-5",
+      "why": "ten million ticks",
+      "outcome": "200",
+      "ms": 59,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "step",
+      "query": "?step=4e-6",
+      "why": "twenty-five million ticks",
+      "outcome": "200",
+      "ms": 180,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "step",
+      "query": "?step=1e-6",
+      "why": "a hundred million ticks",
+      "outcome": "fatal",
+      "ms": 2003,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 1995,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "step",
+      "query": "?step=1e-7",
+      "why": "a billion ticks, 10 bytes",
+      "outcome": "fatal",
+      "ms": 3287,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 3298,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "step",
+      "query": "?step=1e-9",
+      "why": "a hundred billion ticks",
+      "outcome": "RangeError",
+      "ms": 11,
+      "response": 200,
+      "diagnostic": "RangeError: Invalid array length",
+      "reusable": false,
+      "confirmed": {
+        "runs": 1,
+        "counts": {
+          "RangeError": 1
+        },
+        "ms": 11,
+        "diagnostic": "RangeError: Invalid array length"
+      }
+    },
+    {
+      "group": "step",
+      "query": "?step=5e-324",
+      "why": "Number.MIN_VALUE, the smallest denormal",
+      "outcome": "RangeError",
+      "ms": 34,
+      "response": 200,
+      "diagnostic": "RangeError: Invalid array length",
+      "reusable": false,
+      "confirmed": {
+        "runs": 1,
+        "counts": {
+          "RangeError": 1
+        },
+        "ms": 38,
+        "diagnostic": "RangeError: Invalid array length"
+      }
+    },
+    {
+      "group": "step",
+      "query": "?step=1e-309",
+      "why": "denormal, 100/step rounds to Infinity",
+      "outcome": "RangeError",
+      "ms": 39,
+      "response": 200,
+      "diagnostic": "RangeError: Invalid array length",
+      "reusable": false,
+      "confirmed": {
+        "runs": 1,
+        "counts": {
+          "RangeError": 1
+        },
+        "ms": 26,
+        "diagnostic": "RangeError: Invalid array length"
+      }
+    },
+    {
+      "group": "combo",
+      "query": "?min=-1e9&max=1e9",
+      "why": "two billion ticks from both ends",
+      "outcome": "fatal",
+      "ms": 3151,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 3021,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "combo",
+      "query": "?min=-1e308&max=1e308",
+      "why": "the widest finite span",
+      "outcome": "RangeError",
+      "ms": 14,
+      "response": 200,
+      "diagnostic": "RangeError: Invalid array length",
+      "reusable": false,
+      "confirmed": {
+        "runs": 1,
+        "counts": {
+          "RangeError": 1
+        },
+        "ms": 11,
+        "diagnostic": "RangeError: Invalid array length"
+      }
+    },
+    {
+      "group": "combo",
+      "query": "?max=1e4&step=1e-5",
+      "why": "a billion from a modest max and a small step",
+      "outcome": "fatal",
+      "ms": 3043,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 3013,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "combo",
+      "query": "?min=-1e9&max=1e9&step=1e-3",
+      "why": "span and step together",
+      "outcome": "RangeError",
+      "ms": 29,
+      "response": 200,
+      "diagnostic": "RangeError: Invalid array length",
+      "reusable": false,
+      "confirmed": {
+        "runs": 1,
+        "counts": {
+          "RangeError": 1
+        },
+        "ms": 15,
+        "diagnostic": "RangeError: Invalid array length"
+      }
+    },
+    {
+      "group": "combo",
+      "query": "?max=1e9&value=1e9",
+      "why": "large value alongside large max",
+      "outcome": "fatal",
+      "ms": 2921,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 2921,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "combo",
+      "query": "?max=1e9&show=1",
+      "why": "ticks named explicitly",
+      "outcome": "fatal",
+      "ms": 3092,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 2992,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "control_off",
+      "query": "?max=1e9&show=0",
+      "why": "the documented off switch",
+      "outcome": "200",
+      "ms": 15,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "control_off",
+      "query": "?max=1e9&show=0&show=1",
+      "why": "repeated key, last wins in Angular",
+      "outcome": "200",
+      "ms": 23,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "control_off",
+      "query": "?max=1e9&SHOW=0",
+      "why": "wrong case, not the recognised key",
+      "outcome": "fatal",
+      "ms": 2861,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 3069,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "control_off",
+      "query": "?max=1e9&show=false",
+      "why": "truthy string, ticks stay on",
+      "outcome": "fatal",
+      "ms": 3021,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 3022,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "control_off",
+      "query": "?max=1e9&show=%30",
+      "why": "percent-encoded zero",
+      "outcome": "200",
+      "ms": 27,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    },
+    {
+      "group": "parsing",
+      "query": "?max=+1e9",
+      "why": "leading plus",
+      "outcome": "fatal",
+      "ms": 2855,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 2897,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "parsing",
+      "query": "?max=%201e9",
+      "why": "leading space, Number trims",
+      "outcome": "fatal",
+      "ms": 2868,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 2865,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "parsing",
+      "query": "?max=0x3B9ACA00",
+      "why": "hex literal for 1e9",
+      "outcome": "fatal",
+      "ms": 2796,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 2834,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "parsing",
+      "query": "?max=1E9",
+      "why": "capital exponent",
+      "outcome": "fatal",
+      "ms": 2948,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 2853,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "parsing",
+      "query": "?max=1e%2B9",
+      "why": "percent-encoded plus in the exponent",
+      "outcome": "fatal",
+      "ms": 2884,
+      "response": "ECONNRESET",
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "reusable": false,
+      "confirmed": {
+        "runs": 3,
+        "counts": {
+          "fatal": 3
+        },
+        "ms": 2859,
+        "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory"
+      }
+    },
+    {
+      "group": "parsing",
+      "query": "?max=1e9%00",
+      "why": "trailing NUL",
+      "outcome": "200",
+      "ms": 16,
+      "response": 200,
+      "diagnostic": "",
+      "reusable": true,
+      "confirmed": null
+    }
+  ]
+}
