@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-30T01:38:47.629Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/srr-material-oom",
+  "query": "?max=5e7",
+  "control": "?max=1e2",
+  "heaps": [
+    "default"
+  ],
+  "levels": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "rounds": 3,
+  "results": [
+    {
+      "outcome": "200",
+      "ms": 3716,
+      "served": 1,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "default",
+      "heapLimitMiB": 4288,
+      "concurrency": 1
+    },
+    {
+      "outcome": "200",
+      "ms": 3729,
+      "served": 1,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "default",
+      "heapLimitMiB": 4288,
+      "concurrency": 1
+    },
+    {
+      "outcome": "200",
+      "ms": 3624,
+      "served": 1,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "default",
+      "heapLimitMiB": 4288,
+      "concurrency": 1
+    },
+    {
+      "outcome": "200",
+      "ms": 7064,
+      "served": 2,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "default",
+      "heapLimitMiB": 4288,
+      "concurrency": 2
+    },
+    {
+      "outcome": "200",
+      "ms": 7196,
+      "served": 2,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "default",
+      "heapLimitMiB": 4288,
+      "concurrency": 2
+    },
+    {
+      "outcome": "200",
+      "ms": 7311,
+      "served": 2,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "default",
+      "heapLimitMiB": 4288,
+      "concurrency": 2
+    },
+    {
+      "outcome": "200",
+      "ms": 14068,
+      "served": 4,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "default",
+      "heapLimitMiB": 4288,
+      "concurrency": 4
+    },
+    {
+      "outcome": "200",
+      "ms": 13990,
+      "served": 4,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "default",
+      "heapLimitMiB": 4288,
+      "concurrency": 4
+    },
+    {
+      "outcome": "200",
+      "ms": 14398,
+      "served": 4,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "default",
+      "heapLimitMiB": 4288,
+      "concurrency": 4
+    },
+    {
+      "outcome": "200",
+      "ms": 28387,
+      "served": 8,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "default",
+      "heapLimitMiB": 4288,
+      "concurrency": 8
+    },
+    {
+      "outcome": "200",
+      "ms": 28960,
+      "served": 8,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "default",
+      "heapLimitMiB": 4288,
+      "concurrency": 8
+    },
+    {
+      "outcome": "200",
+      "ms": 28180,
+      "served": 8,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "default",
+      "heapLimitMiB": 4288,
+      "concurrency": 8
+    }
+  ]
+}

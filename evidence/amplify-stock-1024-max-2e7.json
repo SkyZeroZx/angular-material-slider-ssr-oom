@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-30T01:50:42.095Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/srr-material-oom",
+  "query": "?max=2e7",
+  "control": "?max=1e2",
+  "heaps": [
+    "1024"
+  ],
+  "levels": [
+    2,
+    4,
+    8
+  ],
+  "rounds": 3,
+  "results": [
+    {
+      "outcome": "200",
+      "ms": 331,
+      "served": 2,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 2
+    },
+    {
+      "outcome": "200",
+      "ms": 282,
+      "served": 2,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 2
+    },
+    {
+      "outcome": "200",
+      "ms": 342,
+      "served": 2,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 2
+    },
+    {
+      "outcome": "200",
+      "ms": 526,
+      "served": 4,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 4
+    },
+    {
+      "outcome": "200",
+      "ms": 567,
+      "served": 4,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 4
+    },
+    {
+      "outcome": "200",
+      "ms": 558,
+      "served": 4,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 4
+    },
+    {
+      "outcome": "fatal",
+      "ms": 1182,
+      "served": 5,
+      "lost": 3,
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 8
+    },
+    {
+      "outcome": "fatal",
+      "ms": 1174,
+      "served": 5,
+      "lost": 3,
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 8
+    },
+    {
+      "outcome": "fatal",
+      "ms": 1125,
+      "served": 6,
+      "lost": 2,
+      "diagnostic": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 8
+    }
+  ]
+}

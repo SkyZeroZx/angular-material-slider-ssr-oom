@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-30T03:29:02.322Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/srr-material-oom",
+  "query": "?value=1e9",
+  "control": "?max=1e2",
+  "heaps": [
+    "1024"
+  ],
+  "levels": [
+    1
+  ],
+  "rounds": 3,
+  "results": [
+    {
+      "outcome": "fatal",
+      "ms": 3,
+      "served": 0,
+      "lost": 1,
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 1
+    },
+    {
+      "outcome": "fatal",
+      "ms": 2,
+      "served": 0,
+      "lost": 1,
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 1
+    },
+    {
+      "outcome": "fatal",
+      "ms": 2,
+      "served": 0,
+      "lost": 1,
+      "diagnostic": "FATAL ERROR: invalid table size Allocation failed - JavaScript heap out of memory",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 1
+    }
+  ]
+}

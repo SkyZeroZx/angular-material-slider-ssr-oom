@@ -11,6 +11,7 @@
     "variants": "node scripts/variants.mjs",
     "fuzz": "node scripts/fuzz.mjs",
     "block": "node scripts/block.mjs",
+    "amplify": "node scripts/amplify.mjs",
     "serve:ssr:srr-material-oom": "node dist/srr-material-oom/server/server.mjs"
   },
   "private": true,

@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-30T01:49:28.401Z",
+  "node": "v24.16.0",
+  "platform": "win32-x64",
+  "versions": {
+    "core": "22.2.4",
+    "material": "22.2.5"
+  },
+  "variant": "stock",
+  "build": "dist/srr-material-oom",
+  "query": "?max=1e7",
+  "control": "?max=1e2",
+  "heaps": [
+    "1024"
+  ],
+  "levels": [
+    2,
+    4,
+    8
+  ],
+  "rounds": 3,
+  "results": [
+    {
+      "outcome": "200",
+      "ms": 158,
+      "served": 2,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 2
+    },
+    {
+      "outcome": "200",
+      "ms": 134,
+      "served": 2,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 2
+    },
+    {
+      "outcome": "200",
+      "ms": 155,
+      "served": 2,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 2
+    },
+    {
+      "outcome": "200",
+      "ms": 263,
+      "served": 4,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 4
+    },
+    {
+      "outcome": "200",
+      "ms": 308,
+      "served": 4,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 4
+    },
+    {
+      "outcome": "200",
+      "ms": 285,
+      "served": 4,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 4
+    },
+    {
+      "outcome": "200",
+      "ms": 503,
+      "served": 8,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 8
+    },
+    {
+      "outcome": "200",
+      "ms": 526,
+      "served": 8,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 8
+    },
+    {
+      "outcome": "200",
+      "ms": 528,
+      "served": 8,
+      "lost": 0,
+      "diagnostic": "",
+      "heap": "1024",
+      "heapLimitMiB": 1216,
+      "concurrency": 8
+    }
+  ]
+}
